@@ -6,6 +6,17 @@
 </body>
 <script type="text/javascript" src="iframe.min.js"></script>
 <script type="text/javascript">
+    <!-- passing video hash as a string -->
     document.body.appendChild(ytIframe('zUsf-Wyeb5k'));
+    
+    <!-- passing a config object -->
+    var config = {
+        https:  true, 
+        width:  160, 
+        height: 115, 
+        videoLink: 'w4yGJEU85wY',
+        cookie: true 
+    }
+    document.body.appendChild(ytIframe(config));
 </script>
 </html>
