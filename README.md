@@ -5,8 +5,7 @@ A flexible, plain javascript youtube video embedding script in less than 40 line
 none
 
 ## Instruction
-1. Include the script `iframe.min.js` to the bottom of your app:
-`<script type="text/javascript" src="iframe.min.js"></script>`
+1. Include the script `iframe.min.js` to the bottom of your app: `<script type="text/javascript" src="iframe.min.js"></script>`
 
 2. You can call ytIframe() by either passing a config object:
 `ytIframe({
@@ -16,16 +15,6 @@ none
     videoLink:  'w4yGJEU85wY',
     cookie:     true
 })`
+or by passing the videoLink directly as a string (and thus, using the defaults for size etc.): `ytIframe('w4yGJEU85wY')` 
 
-OR
-
-by passing the videoLink directly as a string (and thus, using the defaults for size etc.):
-`ytIframe('w4yGJEU85wY')
-
-3. ytIframe() returns a DOM object (iframe) which then can be appended to other elements, like:
-
-`document.body.appendChild(ytIframe(config));` 
-
-OR
-
-`document.getElementById('myVideoDiv').appendChild(ytIframe(config));`
+3. ytIframe() returns a DOM object (iframe) which then can be appended to other elements, like: `document.body.appendChild(ytIframe(config));` or `document.getElementById('myVideoDiv').appendChild(ytIframe(config));`
