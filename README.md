@@ -18,3 +18,5 @@ none
 or by passing the videoLink directly as a string (and thus, using the defaults for size etc.): `ytIframe('w4yGJEU85wY')` 
 
 3. ytIframe() returns a DOM object (iframe) which then can be appended to other elements, like: `document.body.appendChild(ytIframe(config));` or `document.getElementById('myVideoDiv').appendChild(ytIframe(config));`
+
+See index.html for two examples, one by passing a string and the other one by passing a config object.
