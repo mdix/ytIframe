@@ -19,7 +19,7 @@ var ytIframe = (function() {
             config.cookie = true;
         // build src attribute for iframe, regarding the config options
         var videoSource = '';
-        (config.https === false)  ? videoSource += 'http://' : videoSource += 'https://';
+        (config.https === false) ? videoSource += 'http://' : videoSource += 'https://';
         (config.cookie === false) ? videoSource += 'www.youtube-nocookie.com/embed/' : videoSource += 'www.youtube.com/embed/';
         if (config.videoHash.indexOf('www.youtube') !== -1)
             config.videoHash = config.videoHash.split('v=')[1].split('&')[0];
@@ -29,7 +29,7 @@ var ytIframe = (function() {
         iframe.setAttribute('width', parseInt(config.width));
         iframe.setAttribute('height', parseInt(config.height));
         iframe.setAttribute('src', videoSource);
-        iframe.setAttribute('frameborder', 0);
+        iframe.setAttribute('frameBorder', 0);
         iframe.setAttribute('allowfullscreen', '');
         return iframe;
     }
