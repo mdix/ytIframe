@@ -3,11 +3,11 @@ var YtIframe = (function() {
     var YtIframe = function (config) {
         // check if str or obj given, set default values if values are missing
         if ("undefined" === typeof config)
-            return console.log('Please give video string or config object!');
+            return;
         if ('string' === typeof config) {
             config  = {videoHash: config};
         } else if ('object' === typeof config && "undefined" === config.videoHash || '' === config.videoHash)
-            return console.log('Please add a videohash property to your config object & give a youtube video hash');
+            return;
         config.https  = config.https  || false;
         config.width  = config.width  || 560;
         config.height = config.height || 315;
