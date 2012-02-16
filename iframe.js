@@ -15,9 +15,7 @@ var YtIframe = (function() {
         // build src attribute for iframe, regarding the config options
         var videoSource = (false === config.https) ? 'http://' : 'https://';
         videoSource    += (false === config.cookie) ? 'www.youtube-nocookie.com/embed/' : 'www.youtube.com/embed/';
-        if (-1 !== config.videoHash.indexOf('youtube'))
-            config.videoHash = config.videoHash.split('v=')[1].split('&')[0];
-        videoSource    += config.videoHash;
+        videoSource    += (-1 === config.videoHash.indexOf('youtube')) ? config.videoHash : config.videoHash.split('v=')[1].split('&')[0];
         // create element and populate it with attributes regarding the config options
         var iframe = document.createElement('iframe');
         iframe.setAttribute('width', parseInt(config.width, 10));
