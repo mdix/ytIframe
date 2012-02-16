@@ -1,13 +1,13 @@
 var ytIframe = (function() {
     var ytIframe = function (config) {
-        if (undefined == typeof config) {
+        if ("undefined" == typeof config) {
             return console.log('Please give video string or config object!');
         }
         if ('string' == typeof config) {
             var url = config;
             config  = {};
             config.videoHash = url;
-        } else if ('object' == typeof config && undefined === config.videoHash || '' === config.videoHash) {
+        } else if ('object' == typeof config && "undefined" === config.videoHash || '' === config.videoHash) {
             return console.log('Please add a videohash property to your config object & give a youtube video hash');
         }
         if (!config.hasOwnProperty('https'))
