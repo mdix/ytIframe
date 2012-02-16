@@ -1,5 +1,6 @@
 var ytIframe = (function() {
     var ytIframe = function (config) {
+        // check if str or obj given, set default values if values are missing
         if ("undefined" == typeof config)
             return console.log('Please give video string or config object!');
         if ('string' == typeof config) {
@@ -16,14 +17,14 @@ var ytIframe = (function() {
             config.height = 315;
         if (!config.hasOwnProperty('cookie'))
             config.cookie = true;
-        
+        // build src attribute for iframe, regarding the config options
         var videoSource = '';
         (config.https === false)  ? videoSource += 'http://' : videoSource += 'https://';
         (config.cookie === false) ? videoSource += 'www.youtube-nocookie.com/embed/' : videoSource += 'www.youtube.com/embed/';
         if (config.videoHash.indexOf('www.youtube') !== -1)
             config.videoHash = config.videoHash.split('v=')[1].split('&')[0];
         videoSource += config.videoHash;
-        
+        // create element and populate it with attributes regarding the config options
         var iframe = document.createElement('iframe');
         iframe.setAttribute('width', parseInt(config.width));
         iframe.setAttribute('height', parseInt(config.height));
