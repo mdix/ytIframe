@@ -12,11 +12,10 @@ var YtIframe = (function() {
         config.width  = config.width  || 560;
         config.height = config.height || 315;
         config.cookie = config.cookie || true;
-        // build src attribute for iframe, regarding the config options
+        // build src attribute for iframe, create iframe element and populate it with attributes regarding the config options
         var videoSource = (false === config.https) ? 'http://' : 'https://';
         videoSource    += (false === config.cookie) ? 'www.youtube-nocookie.com/embed/' : 'www.youtube.com/embed/';
         videoSource    += (-1 === config.videoHash.indexOf('youtube')) ? config.videoHash : config.videoHash.split('v=')[1].split('&')[0];
-        // create element and populate it with attributes regarding the config options
         var iframe = document.createElement('iframe');
         iframe.setAttribute('width', parseInt(config.width, 10));
         iframe.setAttribute('height', parseInt(config.height, 10));

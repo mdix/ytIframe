@@ -1,5 +1,5 @@
 # ytIframe
-A flexible, plain javascript youtube video embedding script in less than 40 lines. You can embed as much videos as you like, each sharing one config or with one config for each video (to have different sizes et cetera).
+A flexible, plain javascript youtube video embedding script in 30 lines. You can embed as much videos as you like, each sharing one config or with one config for each video (to have different sizes et cetera).
 
 ## Dependencies
 none
