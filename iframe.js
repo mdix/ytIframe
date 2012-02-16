@@ -20,10 +20,8 @@ var ytIframe = (function() {
         var videoSource = '';
         (config.https === false)  ? videoSource += 'http://' : videoSource += 'https://';
         (config.cookie === false) ? videoSource += 'www.youtube-nocookie.com/embed/' : videoSource += 'www.youtube.com/embed/';
-        if (config.videoHash.indexOf('www.youtube') !== -1) {
-            var fullUrl = config.videoHash.split('v=');
-            config.videoHash = fullUrl[1].split('&')[0];
-        }
+        if (config.videoHash.indexOf('www.youtube') !== -1)
+            config.videoHash = config.videoHash.split('v=')[1].split('&')[0];
         videoSource += config.videoHash;
         
         var iframe = document.createElement('iframe');
