@@ -8,14 +8,10 @@ var YtIframe = (function() {
             config  = {videoHash: config};
         } else if ('object' === typeof config && "undefined" === config.videoHash || '' === config.videoHash)
             return console.log('Please add a videohash property to your config object & give a youtube video hash');
-        if (!config.hasOwnProperty('https'))
-            config.https  = false;
-        if (!config.hasOwnProperty('width'))
-            config.width  = 560;
-        if (!config.hasOwnProperty('height'))
-            config.height = 315;
-        if (!config.hasOwnProperty('cookie'))
-            config.cookie = true;
+        config.https  = config.https  || false;
+        config.width  = config.width  || 560;
+        config.height = config.height || 315;
+        config.cookie = config.cookie || true;
         // build src attribute for iframe, regarding the config options
         var videoSource = '';
         videoSource += (config.https === false) ? 'http://' : 'https://';
