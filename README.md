@@ -12,10 +12,10 @@ none
     https:      true,
     width:      560,
     height:     315,
-    videoLink:  'w4yGJEU85wY',
+    videoHash:  'w4yGJEU85wY',
     cookie:     true
 })`
-or by passing the videoLink directly as a string (and thus, using the defaults for size etc.): `ytIframe('w4yGJEU85wY')` 
+or by passing the videoHash directly as a string (and thus, using the defaults for size etc.): `ytIframe('w4yGJEU85wY')` 
 
 3. ytIframe() returns a DOM object (iframe) which then can be appended to other elements, like: `document.body.appendChild(ytIframe(config));` or `document.getElementById('myVideoDiv').appendChild(ytIframe(config));`
 

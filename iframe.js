@@ -6,9 +6,9 @@ var ytIframe = (function() {
         if ('string' == typeof config) {
             var url = config;
             config  = {};
-            config.videoLink = url;
-        } else if ('object' == typeof config && undefined === config.videoLink || '' === config.videoLink) {
-            return console.log('Please add a videolink property to your config object & give a youtube video hash');
+            config.videoHash = url;
+        } else if ('object' == typeof config && undefined === config.videoHash || '' === config.videoHash) {
+            return console.log('Please add a videohash property to your config object & give a youtube video hash');
         }
         if (!config.hasOwnProperty('https'))
             config.https  = false;
@@ -22,7 +22,7 @@ var ytIframe = (function() {
         var videoSource = '';
         (config.https === false)  ? videoSource += 'http://' : videoSource += 'https://';
         (config.cookie === false) ? videoSource += 'www.youtube-nocookie.com/embed/' : videoSource += 'www.youtube.com/embed/';
-        videoSource += config.videoLink;
+        videoSource += config.videoHash;
         
         var iframe = document.createElement('iframe');
         iframe.setAttribute('width', parseInt(config.width));
