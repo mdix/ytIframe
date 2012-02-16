@@ -4,18 +4,18 @@ var YtIframe = (function() {
         // check if str or obj given, set default values if values are missing
         if ("undefined" === typeof config)
             return;
-        if ('string' === typeof config) {
+        if ('string' === typeof config)
             config  = {videoHash: config};
-        } else if ('object' === typeof config && "undefined" === config.videoHash || '' === config.videoHash)
+        if ('object' === typeof config && "undefined" === config.videoHash || '' === config.videoHash)
             return;
         config.https  = config.https  || false;
         config.width  = config.width  || 560;
         config.height = config.height || 315;
         config.cookie = config.cookie || true;
         // build src attribute for iframe, regarding the config options
-        var videoSource = (config.https === false) ? 'http://' : 'https://';
-        videoSource    += (config.cookie === false) ? 'www.youtube-nocookie.com/embed/' : 'www.youtube.com/embed/';
-        if (config.videoHash.indexOf('www.youtube') !== -1)
+        var videoSource = (false === config.https) ? 'http://' : 'https://';
+        videoSource    += (false === config.cookie) ? 'www.youtube-nocookie.com/embed/' : 'www.youtube.com/embed/';
+        if (-1 !== config.videoHash.indexOf('www.youtube'))
             config.videoHash = config.videoHash.split('v=')[1].split('&')[0];
         videoSource    += config.videoHash;
         // create element and populate it with attributes regarding the config options
