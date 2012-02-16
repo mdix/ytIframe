@@ -5,8 +5,7 @@ var YtIframe = (function() {
         if ("undefined" === typeof config)
             return console.log('Please give video string or config object!');
         if ('string' === typeof config) {
-            var url = config;
-            config  = {videoHash: url};
+            config  = {videoHash: config};
         } else if ('object' === typeof config && "undefined" === config.videoHash || '' === config.videoHash)
             return console.log('Please add a videohash property to your config object & give a youtube video hash');
         if (!config.hasOwnProperty('https'))
