@@ -8,13 +8,25 @@
 <script type="text/javascript">
     <!-- passing video hash as a string -->
     document.body.appendChild(YtIframe('zUsf-Wyeb5k'));
+    <!-- passing video url as a string -->
+    document.body.appendChild(YtIframe('http://www.youtube.com/watch?v=IXFexk6k39M&feature=context&context=G2cee8caRVAAAAAAAAAg'));
     
-    <!-- passing a config object -->
+    <!-- passing a config object with a hash -->
     var config = {
         https:  true, 
         width:  160, 
         height: 115, 
         videoHash: 'http://www.youtube.com/watch?v=Gg_wDjrER5E&feature=fvwp&NR=1',
+        cookie: true 
+    }
+    document.body.appendChild(YtIframe(config));
+    
+    <!-- passing a config object with a url  -->
+    var config = {
+        https:  true, 
+        width:  160, 
+        height: 115, 
+        videoHash: 'http://www.youtube.com/watch?v=IXFexk6k39M&feature=context&context=G2cee8caRVAAAAAAAAAg',
         cookie: true 
     }
     document.body.appendChild(YtIframe(config));
