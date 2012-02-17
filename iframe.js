@@ -11,7 +11,7 @@ var YtIframe = (function() {
         config.https  = config.https  || false;
         config.width  = config.width  || 560;
         config.height = config.height || 315;
-        config.cookie = config.cookie || true;
+        config.cookie = (config.cookie === false) ? false : true;
         // build src attribute for iframe, create iframe element and populate it with attributes regarding the config options
         var videoSource = (false === config.https) ? 'http://' : 'https://';
         videoSource    += (false === config.cookie) ? 'www.youtube-nocookie.com/embed/' : 'www.youtube.com/embed/';
