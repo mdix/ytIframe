@@ -21,7 +21,7 @@ var YtIframe = (function() {
         iframe.setAttribute('height', parseInt(config.height, 10));
         iframe.setAttribute('src', videoSource);
         iframe.setAttribute('frameBorder', 0);
-        iframe.setAttribute('allowfullscreen', '');
+        iframe.setAttribute('allowFullScreen', '');
         return iframe;
     };
     return function (config) {
