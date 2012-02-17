@@ -6,7 +6,7 @@ var YtIframe = (function() {
             return;
         if ('string' === typeof config)
             config  = {videoHash: config};
-        if ('object' === typeof config && "undefined" === config.videoHash || '' === config.videoHash)
+        if ('object' === typeof config && ("undefined" === config.videoHash || '' === config.videoHash))
             return;
         config.https  = config.https  || false;
         config.width  = config.width  || 560;
