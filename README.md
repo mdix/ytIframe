@@ -19,7 +19,8 @@ or by passing the videoHash directly as a string (and thus, using the defaults f
 
 3. YtIframe() returns a DOM object (IFRAME) which then can be appended to other elements, like: `document.body.appendChild(YtIframe(config));` or `document.getElementById('myVideoDiv').appendChild(YtIframe(config));`
 
-See index.html for four examples, two by passing a string and two by passing a config object.
+## Demo
+See [http://dixpix.de/github/ytiframe/](http://dixpix.de/github/ytiframe/) for a live demo. To see the markup see index.html.
 
 ## Tests
 ytIframe is tested with [Jasmine BDD testing framework](https://github.com/pivotal/jasmine) which is not included. You can download Jasmine [here](http://pivotal.github.com/jasmine/download.html) and place the contents in test/lib/. To run the tests, open test/specRunner.html in your browser.

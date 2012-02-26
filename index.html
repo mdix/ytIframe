@@ -1,34 +1,51 @@
 <!doctype html>
 <html>
 <head>
+    <style type="text/css">
+        span {display: block; font-family: Arial, Helvetica, sans-serif; margin: 25px 0 10px 0; border-radius: 5px; background-color: #FFCCFF; padding: 3px 6px; line-height: 25px; color: #555; font-size: 18px;}
+        h1 a {color: black; font-size: 20px;}
+    </style>
 </head>
 <body>
+    <h1>ytIframe <a href="https://github.com/mdix/ytIframe">on github</a></h1>
 </body>
 <script type="text/javascript" src="iframe.js"></script>
 <script type="text/javascript">
-    <!-- passing video hash as a string -->
+    // video hash
+    var span = document.createElement('span');
+    span.innerHTML = "<b>Passing video hash as a string</b></b><br>YtIframe('zUsf-Wyeb5k');";
+    document.body.appendChild(span);
     document.body.appendChild(YtIframe('zUsf-Wyeb5k'));
 
-    <!-- passing video url as a string -->
+    // video url
+    var span = document.createElement('span');
+    span.innerHTML = "<b>Passing video URL as a string</b><br>YtIframe('http://www.youtube.com/watch?v=IXFexk6k39M&feature=context&context=G2cee8caRVAAAAAAAAAg');";
+    document.body.appendChild(span);
     document.body.appendChild(YtIframe('http://www.youtube.com/watch?v=IXFexk6k39M&feature=context&context=G2cee8caRVAAAAAAAAAg'));
-    
-    <!-- passing a config object with a hash -->
+
+    // config object with hash
+    var span = document.createElement('span');
+    span.innerHTML = "<b>Passing config object with videoHash</b><br>YtIframe({ https:  true, width:  160, height: 115, videoHash: 'Gg_wDjrER5E', cookie: true });";
+    document.body.appendChild(span);
     var config = {
-        https:  true, 
-        width:  160, 
-        height: 115, 
+        https:  true,
+        width:  160,
+        height: 115,
         videoHash: 'Gg_wDjrER5E',
-        cookie: true 
+        cookie: true
     }
     document.body.appendChild(YtIframe(config));
-    
-    <!-- passing a config object with a url  -->
+
+    // config object with URL
+    var span = document.createElement('span');
+    span.innerHTML = "<b>Passing config object with video URL</b><br>YtIframe({ https:  true, width:  160, height: 115, videoHash: 'http://www.youtube.com/watch?v=IXFexk6k39M&feature=context&context=G2cee8caRVAAAAAAAAAg', cookie: true });";
+    document.body.appendChild(span);
     var config = {
-        https:  true, 
-        width:  160, 
-        height: 115, 
+        https:  true,
+        width:  160,
+        height: 115,
         videoHash: 'http://www.youtube.com/watch?v=IXFexk6k39M&feature=context&context=G2cee8caRVAAAAAAAAAg',
-        cookie: true 
+        cookie: true
     }
     document.body.appendChild(YtIframe(config));
 </script>
