@@ -15,7 +15,7 @@ none
     videoHash:  'w4yGJEU85wY',
     cookie:     true
 })`
-or by passing the videoHash directly as a string (and thus, using the defaults for size etc.): `YtIframe('w4yGJEU85wY')` You may also pass a full youtube url and ytIframe extracts the hash.
+or by passing the videoHash directly as a string (and thus, using the defaults for size etc.): `YtIframe('w4yGJEU85wY')` You may also pass a full youtube url and ytIframe extracts the hash, like: `YtIframe('http://www.youtube.com/watch?v=VLnr3-tsJ0A')`.
 
 3. YtIframe() returns a DOM object (IFRAME) which then can be appended to other elements, like: `document.body.appendChild(YtIframe(config));` or `document.getElementById('myVideoDiv').appendChild(YtIframe(config));`
 
