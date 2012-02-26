@@ -48,7 +48,7 @@ describe('YtIframe instantiated with a videoHash string', function() {
 });
 
 describe('YtIframe instantiated with a full url string', function() {
-    var videoURL  = 'http://www.youtube.com/watch?v=pqaARDsiJv4';
+    var videoURL  = 'http://www.youtube.com/watch?v=pqaARDsiJv4&feature=related';
     var videoHash = 'pqaARDsiJv4';
     var iframe    = YtIframe(videoURL);
 
