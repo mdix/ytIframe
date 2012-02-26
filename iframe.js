@@ -2,11 +2,11 @@ var YtIframe = (function() {
 "use strict";
     var YtIframe = function (config) {
         // check if str or obj given, set default values if values are missing
-        if ("undefined" === typeof config)
+        if ('undefined' == typeof config)
             return;
-        if ('string' === typeof config)
+        if ('string' == typeof config)
             config  = {videoHash: config};
-        if ('object' === typeof config && ("undefined" === config.videoHash || '' === config.videoHash))
+        if ('object' == typeof config && ("undefined" === config.videoHash || '' === config.videoHash))
             return;
         config.https  = config.https  || false;
         config.width  = config.width  || 560;
