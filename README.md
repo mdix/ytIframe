@@ -18,7 +18,7 @@ Currently ytIframe is available as version 1.0, which can be downloaded [here](h
     videoHash:  'w4yGJEU85wY',
     cookie:     true
 })`
-or by passing the videoHash directly as a string (and thus, using the defaults for size etc.): `YtIframe('w4yGJEU85wY')` You may also pass a full youtube url and ytIframe extracts the hash, like: `YtIframe('http://www.youtube.com/watch?v=VLnr3-tsJ0A')`.
+or by passing the videoHash directly as a string (and thus, using the defaults for size etc.): `YtIframe('w4yGJEU85wY')` You may also pass a full youtube url and ytIframe extracts the hash, like: `YtIframe('http://www.youtube.com/watch?v=VLnr3-tsJ0A')`. Note: This also works if you use the config object.
 
 3. YtIframe() returns a DOM object (IFRAME) which then can be appended to other elements, like: `document.body.appendChild(YtIframe(config));` or `document.getElementById('myVideoDiv').appendChild(YtIframe(config));`
 
