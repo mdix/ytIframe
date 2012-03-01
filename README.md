@@ -4,6 +4,9 @@ A flexible, plain javascript youtube video embedding script in 30 lines. You can
 ## Dependencies
 none
 
+## Download
+Currently ytIframe is available as version 1.0, which can be downloaded [here](https://github.com/mdix/ytIframe/tags).
+
 ## Instruction
 1. Include the script `iframe.min.js` to the bottom of your app: `<script type="text/javascript" src="iframe.min.js"></script>`
 
