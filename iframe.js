@@ -1,13 +1,6 @@
 var YtIframe = (function() {
 "use strict";
     var YtIframe = function (config) {
-        // check if str or obj given, set default values if values are missing
-        if ('undefined' == typeof config)
-            return;
-        if ('string' == typeof config)
-            config  = {videoHash: config};
-        if ('object' == typeof config && ("undefined" === config.videoHash || '' === config.videoHash))
-            return;
         config.https  = config.https  || false;
         config.width  = config.width  || 560;
         config.height = config.height || 315;
@@ -25,6 +18,13 @@ var YtIframe = (function() {
         return iframe;
     };
     return function (config) {
+        // check if str or obj given, set default values if values are missing
+        if ('undefined' == typeof config)
+            return false;
+        if ('string' == typeof config)
+            config  = {videoHash: config};
+        if ('object' == typeof config && !config.videoHash)
+            return false;
         return new YtIframe(config);
     };
 })();

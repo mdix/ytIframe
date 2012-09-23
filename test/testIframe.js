@@ -1,3 +1,21 @@
+describe('YtIframe instantiated with', function() {
+    it("no param returns false", function() {
+        var iframe = YtIframe();
+        expect(iframe).toBe(false);
+    });
+    it("an object as param where object.videoHash is undefined", function() {
+        var iframe = YtIframe({});
+        expect(iframe).toBe(false);
+    });
+    it("an object as param where object.videoHash is null", function() {
+        var iframe = YtIframe({videoHash: null});
+        expect(iframe).toBe(false);
+    });
+    it("an object as param where object.videoHash is ''", function() {
+        var iframe = YtIframe({videoHash: ''});
+        expect(iframe).toBe(false);
+    });
+});
 describe('YtIframe instantiated with a videoHash string', function() {
     var videoHash = 'w4yGJEU85wY';
     var iframe = YtIframe(videoHash);
