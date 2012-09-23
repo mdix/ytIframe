@@ -8,7 +8,7 @@ Please do not hesitate to inform me about downsides, change requests et cetera. 
 none
 
 ## Download
-Currently ytIframe is available as version 1.0, which can be downloaded [here](https://github.com/mdix/ytIframe/tags).
+Currently ytIframe is available as version 1.0.1, which can be downloaded [here](https://github.com/mdix/ytIframe/zipball/ytIframe-1.0.1).
 
 ## Instruction
 1. Include the script `iframe.min.js` to the bottom of your app: `<script type="text/javascript" src="iframe.min.js"></script>`
